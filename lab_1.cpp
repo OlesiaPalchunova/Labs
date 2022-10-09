@@ -12,50 +12,50 @@ public:
 	BigInt(string);
 	BigInt(int);
 	BigInt(BigInt &);
-    ~BigInt() = default;
+	~BigInt() = default;
 
-    BigInt& operator=(const BigInt&);
-    BigInt& operator~();
+	BigInt& operator=(const BigInt&);
+	BigInt& operator~();
 
-    BigInt& operator++();
-    BigInt operator++(int temp);
-    BigInt& operator--();
-    BigInt operator--(int temp);
+	BigInt& operator++();
+	BigInt operator++(int temp);
+	BigInt& operator--();
+	BigInt operator--(int temp);
 
-    BigInt& operator+=(const BigInt&);
-    BigInt& operator-=(const BigInt&);
-    BigInt& operator*=(const BigInt&);
-    BigInt& operator/=(const BigInt&);
+	BigInt& operator+=(const BigInt&);
+	BigInt& operator-=(const BigInt&);
+	BigInt& operator*=(const BigInt&);
+	BigInt& operator/=(const BigInt&);
 
-    friend bool operator==(const BigInt&, const BigInt&);
-    friend bool operator!=(const BigInt &, const BigInt &);
-    friend bool operator<(const BigInt &, const BigInt &);
-    friend bool operator>(const BigInt &, const BigInt &);
-    friend bool operator<=(const BigInt &, const BigInt &);
-    friend bool operator>=(const BigInt &, const BigInt &);
+	friend bool operator==(const BigInt&, const BigInt&);
+	friend bool operator!=(const BigInt &, const BigInt &);
+	friend bool operator<(const BigInt &, const BigInt &);
+	friend bool operator>(const BigInt &, const BigInt &);
+	friend bool operator<=(const BigInt &, const BigInt &);
+	friend bool operator>=(const BigInt &, const BigInt &);
 
-    friend BigInt operator+(const BigInt &, const BigInt &);
-    friend BigInt operator-(const BigInt &, const BigInt &);
-    friend BigInt operator*(const BigInt &, const BigInt &);
-    friend BigInt operator/(const BigInt &, const BigInt &);
-    friend BigInt operator^(const BigInt &, const BigInt &);
-    friend BigInt operator&(const BigInt &, const BigInt &);
-    friend BigInt operator|(const BigInt &, const BigInt &);
-    friend BigInt operator%(const BigInt &, const BigInt &);
+	friend BigInt operator+(const BigInt &, const BigInt &);
+	friend BigInt operator-(const BigInt &, const BigInt &);
+	friend BigInt operator*(const BigInt &, const BigInt &);
+	friend BigInt operator/(const BigInt &, const BigInt &);
+	friend BigInt operator^(const BigInt &, const BigInt &);
+	friend BigInt operator&(const BigInt &, const BigInt &);
+	friend BigInt operator|(const BigInt &, const BigInt &);
+	friend BigInt operator%(const BigInt &, const BigInt &);
 
-    BigInt& operator^=(const BigInt&);
-    BigInt& operator%=(const BigInt&);
-    BigInt& operator&=(const BigInt&);
-    BigInt& operator|=(const BigInt&);
+	BigInt& operator^=(const BigInt&);
+	BigInt& operator%=(const BigInt&);
+	BigInt& operator&=(const BigInt&);
+	BigInt& operator|=(const BigInt&);
 
-    BigInt operator+();  // unary +
-    BigInt operator-();  // unary -
+	BigInt operator+();  // unary +
+	BigInt operator-();  // unary -
 
-    operator int() const;
-    operator std::string() const;
-    friend size_t size(const BigInt &);
+	operator int() const;
+	operator std::string() const;
+	friend size_t size(const BigInt &);
 
-    friend ostream &operator<<(ostream &,const BigInt &);
+	friend ostream &operator<<(ostream &,const BigInt &);
 };
 
 size_t size(const BigInt& a){
